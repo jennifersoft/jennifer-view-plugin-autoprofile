@@ -1,0 +1,78 @@
+<div id="argos-main">
+    <div class="row">
+        <div class="navbar">
+            <div class="inline">
+                Domain
+                <div id="combo_domain" class="combo">
+                    <a class="btn small">Select...</a>
+                    <a class="btn small toggle"><i class="icon-arrow2"></i></a>
+                    <ul>
+                        #foreach($domain in $domains)
+                        <li value="$domain.sid">$domain.shortName</li>
+                        #end
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="blockquote">Double-clicking a row, you can modify the value.</p>
+
+        <table id="table_detail" class="table classic">
+            <thead>
+            <tr>
+                <th width="50px"></th>
+                <th title="Name">Name</th>
+                <th title="Baseline Transaction Elapsed Time">Baseline Transaction Elapsed Time</th>
+                <th title="Baseline Method Elapsed Time">Baseline Method Elapsed Time</th>
+                <th title="Baseline Ignorable Method Elapsed Time">Baseline Ignorable Method Elapsed Time</th>
+                <th title="Profile Queue Size">Profile Queue Size</th>
+                <th title="Profile Clear Interval">Profile Clear Interval</th>
+                <th title="Check Interval For Select Transaction To Profile">Check Interval For Select Transaction To Profile</th>
+                <th title="Method Sampling Interval During Profile">Method Sampling Interval During Profile</th>
+                <th title="Method Sampling Stack Depth Limit">Method Sampling Stack Depth Limit</th>
+                <th title="Max Profile Target Count">Max Profile Target Count</th>
+                <th title="Enable">Enable</th>
+                <th title="Functions">Functions</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script id="tpl_row" type="text/template">
+            <tr>
+                <td></td>
+                <td><!= name !></td>
+                <td style="cursor: edit"><!= baselineTransactionElapsedTimeForProfile.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= baselineMethodElapsedTimeForProfile.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= baselineIgnorableMethodElapsedTimeForSendToDataServer.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= profileQueueSize.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= profileClearInterval.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= checkIntervalForSelectTransactionToProfile.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= methodSamplingIntervalDuringProfile.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= methodSamplingStackDepthLimit.toLocaleForJennifer() !></td>
+                <td style="cursor: edit"><!= maxProfileTargetCount.toLocaleForJennifer() !></td>
+                <td style="cursor: edit" class="enable">
+                    <! if(enable) { !>
+                    <div class="switch on"></div>
+                    <! } else { !>
+                    <div class="switch off"></div>
+                    <! } !>
+                </td>
+                <td align="center">
+                    <i onclick="removeAutoProfile(<!= oid !>)" class="icon-close icon-function" title="Remove"></i>
+                    <i onclick="restoreAutoProfile(<!= oid !>)" class="icon-refresh2 icon-function" title="Restore"></i>
+                </td>
+            </tr>
+        </script>
+
+        <script id="tpl_none" type="text/template">
+            <tr>
+                <td colspan="13" class="none" align="center">Data does not exist.</td>
+            </tr>
+        </script>
+    </div>
+
+    <input type="hidden" value='$i18n.get("M0001")' />
+</div>

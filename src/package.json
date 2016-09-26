@@ -1,0 +1,10 @@
+{
+  "title": "Auto Profiling",
+  "description": "",
+  "version": "5.1.3",
+  "mainUrl": "/plugin/autoprofile",
+  "mainTpl": "tpl/index.vm",
+  "resources" : [ "res/index.css", "res/index.js" ],
+  "thumbnails": [ "img/jennifer.png", "img/dark.png" ],
+  "i18n": [ "i18n/message_ko.properties", "i18n/message_en.properties" ]
+}
