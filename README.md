@@ -9,4 +9,4 @@ After modifying the configuration file, you must restart the view server.
 
 ## The minimum supported version of the agent
 
->= 5.1.3
+> 5.1.3
