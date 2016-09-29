@@ -7,6 +7,10 @@ plugin_class_path = ${PLUGIN_PROJECT_PATH}/dist/jennifer-view-plugin-autoprofile
 
 After modifying the configuration file, you must restart the view server.
 
+## Supported Platforms
+
+Only Java
+
 ## Supported version of the agent
 
 Greater than or equal to version 5.1.3
