@@ -11,6 +11,6 @@ After modifying the configuration file, you must restart the view server.
 
 Only Java
 
-## Supported version of the agent
+## Supported version
 
 Greater than or equal to version 5.1.3
