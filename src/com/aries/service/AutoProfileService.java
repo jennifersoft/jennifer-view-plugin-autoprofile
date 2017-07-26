@@ -1,10 +1,9 @@
-package com.jennifersoft.service;
+package com.aries.service;
 
-import com.jennifersoft.data.viewdata.AutoProfileSettingViewData;
-import com.jennifersoft.view.core.nio.DataServerException;
+import com.aries.data.viewdata.AutoProfileSettingViewData;
+import com.aries.view.core.nio.DataServerException;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  *

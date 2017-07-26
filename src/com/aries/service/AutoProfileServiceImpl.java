@@ -1,12 +1,12 @@
-package com.jennifersoft.service;
+package com.aries.service;
 
-import com.jennifersoft.data.viewdata.AutoProfileSettingViewData;
-import com.jennifersoft.data.viewdata.ViewDataSerializer;
-import com.jennifersoft.view.core.nio.DataServerCommandCaller;
-import com.jennifersoft.view.core.nio.DataServerException;
-import jennifer.net.CommandRequest;
-import jennifer.net.CommandResponse;
-import jennifer.nio.j5.CmdDef;
+import com.aries.data.viewdata.AutoProfileSettingViewData;
+import com.aries.data.viewdata.ViewDataSerializer;
+import com.aries.view.core.nio.DataServerCommandCaller;
+import com.aries.view.core.nio.DataServerException;
+import aries.net.CommandRequest;
+import aries.net.CommandResponse;
+import aries.nio.j5.CmdDef;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

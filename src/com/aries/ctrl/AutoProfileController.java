@@ -1,13 +1,12 @@
-package com.jennifersoft.ctrl;
+package com.aries.ctrl;
 
-import com.jennifersoft.data.viewdata.AutoProfileSettingViewData;
-import com.jennifersoft.view.core.nio.DataServerException;
-import com.jennifersoft.view.domain.Agent;
-import com.jennifersoft.view.service.DomainService;
-import com.jennifersoft.view.service.mng.AgentService;
-import com.jennifersoft.view.service.perf.TextDataService;
-import com.jennifersoft.view.service.perf.XViewService;
-import com.jennifersoft.view.web.BaseController;
+import com.aries.data.viewdata.AutoProfileSettingViewData;
+import com.aries.view.core.nio.DataServerException;
+import com.aries.view.domain.Agent;
+import com.aries.view.service.DomainService;
+import com.aries.view.service.mng.AgentService;
+import com.aries.view.service.perf.TextDataService;
+import com.aries.view.service.perf.XViewService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
-import com.jennifersoft.service.AutoProfileService;
+import com.aries.service.AutoProfileService;
 
 import javax.servlet.ServletContext;
 import java.util.ArrayList;
@@ -28,8 +27,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = { "/plugin" })
-public class AutoProfileController extends BaseController
-{
+public class AutoProfileController {
     @Autowired
     private ServletContext servletContext;
     @Autowired
